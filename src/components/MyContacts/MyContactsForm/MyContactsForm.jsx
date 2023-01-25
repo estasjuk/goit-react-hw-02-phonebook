@@ -37,6 +37,7 @@ class MyContactsForm extends Component {
         <div className={css.formGroup}>
           <label>Name</label>
           <input
+            className={css.input}
             type="text"
             name="name"
             value={name}
@@ -46,10 +47,10 @@ class MyContactsForm extends Component {
             title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
             required
           />
-        </div>
-        <div className={css.formGroup}>
+
           <label>Number</label>
           <input
+            className={css.input}
             type="tel"
             name="number"
             value={number}
@@ -59,8 +60,11 @@ class MyContactsForm extends Component {
             title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
             required
           />
+
+          <button className={css.btn} type="submit">
+            Add contact
+          </button>
         </div>
-        <button type="submit">Add contact</button>
       </form>
     );
   }

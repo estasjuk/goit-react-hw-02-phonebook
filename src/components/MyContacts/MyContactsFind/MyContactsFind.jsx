@@ -6,7 +6,12 @@ const MyContactsFind = ({ handleChange }) => {
   return (
     <div className={css.formGroup}>
       <label>Find contact by name</label>
-      <input name="filter" onChange={handleChange} placeholder="Enter a name" />
+      <input
+        className={css.input}
+        name="filter"
+        onChange={handleChange}
+        placeholder="Enter a name"
+      />
     </div>
   );
 };

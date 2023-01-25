@@ -82,12 +82,12 @@ class MyContacts extends Component {
     return (
       <div className={css.wrapper}>
         <div className={css.block}>
-          <h3>Phonebook</h3>
+          <h3 className={css.title}>Phonebook</h3>
           <MyContactsForm onSubmit={addContact} />
         </div>
 
         <div className={css.block}>
-          <h3>Contacts</h3>
+          <h3 className={css.title}>Contacts</h3>
           <MyContactsFind handleChange={handleFind} />
           {isContacts && (
             <MyContactList removeContact={removeContact} contacts={peoples} />

@@ -4,15 +4,19 @@ import css from './MyContactsList.module.css';
 
 const MyContactList = ({ removeContact, contacts }) => {
   const items = contacts.map(({ id, name, number }) => (
-    <li key={id}>
+    <li className={css.item} key={id}>
       {name}: {number}
-      <button onClick={() => removeContact(id)} type="button">
+      <button
+        className={css.btn}
+        onClick={() => removeContact(id)}
+        type="button"
+      >
         Delete
       </button>
     </li>
   ));
 
-  return <ol>{items}</ol>;
+  return <ol className={ css.list}>{items}</ol>;
 };
 
 export default MyContactList;
