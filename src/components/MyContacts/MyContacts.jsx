@@ -39,7 +39,7 @@ class MyContacts extends Component {
   };
 
   handleFind = ({ target }) => {
-    this.setState({ find: target.value });
+    this.setState({ filter: target.value });
   };
 
   isDublicate(name) {
