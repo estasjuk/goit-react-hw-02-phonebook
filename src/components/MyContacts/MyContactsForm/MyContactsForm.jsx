@@ -1,12 +1,13 @@
 import { Component } from 'react';
 import PropTypes from 'prop-types';
 
-import inititalState from './initialState';
-
 import css from './MyContactsForm.module.css';
 
 class MyContactsForm extends Component {
-  state = { ...inititalState };
+  state = {
+    name: '',
+    number: '',
+  };
 
   handleSubmit = e => {
     e.preventDefault();
@@ -18,7 +19,7 @@ class MyContactsForm extends Component {
   };
 
   reset() {
-    this.setState({ ...inititalState });
+    this.setState({ name: '', number: '' });
   }
 
   handleChange = ({ target }) => {
